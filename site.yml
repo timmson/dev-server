@@ -1,0 +1,7 @@
+---
+- name: Docker setup
+  hosts: all
+  roles:
+    - set-apt-source
+    - common
+    - docker

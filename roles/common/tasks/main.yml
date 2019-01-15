@@ -1,0 +1,22 @@
+---
+  - name: Set bash colors
+    replace:
+       dest: "{{ item }}"
+       regexp: '#force_color_prompt=yes'
+       replace: 'force_color_prompt=yes'
+    become: yes
+    with_items:
+       - "/root/.bashrc"
+       - "/home/{{ ansible_user_id }}/.bashrc"
+
+  - name: Turn apport off
+    replace:
+       dest: /etc/default/apport
+       regexp: 'enabled=1'
+       replace: 'enabled=0'
+    become: yes
+
+  - name: Set timezone
+    timezone:
+      name: '{{ time_zone }}'
+    become: yes

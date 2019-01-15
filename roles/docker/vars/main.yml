@@ -1,0 +1,8 @@
+docker_key_url: 'https://download.docker.com/linux/ubuntu/gpg'
+docker_deb_url: 'deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename|lower }} stable'
+
+config_service_password: '{{ global_password }}'
+notification_service_password: '{{ global_password }}'
+statistics_service_password: '{{ global_password }}'
+account_service_password: '{{ global_password }}'
+mongodb_password: '{{ global_password }}'
