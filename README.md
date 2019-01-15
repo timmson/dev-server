@@ -24,5 +24,6 @@ vagrant box add timmson/ubuntu-docker-ru
 ## Appications
 * Jetbrains YouTrack
 * Gitlab
-
+* Mattermost
+* Seafile
 * Paperless
