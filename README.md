@@ -26,4 +26,4 @@ vagrant box add timmson/ubuntu-docker-ru
 * [Gitlab](http://localhost:8280)
 * [Mattermost](http://localhost:8380)
 * [Seafile](http://localhost:8480)
-* Paperless
+* [Paperless](http://localhost:8580)
