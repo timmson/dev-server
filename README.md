@@ -22,8 +22,8 @@ vagrant box add timmson/ubuntu-docker-ru
 * Docker/docker-Compose from download.docker.com 
 
 ## Appications
-* Jetbrains YouTrack
-* Gitlab
-* Mattermost
-* Seafile
+* [Jetbrains YouTrack](http://localhost:8180)
+* [Gitlab](http://localhost:8280)
+* [Mattermost](http://localhost:8380)
+* [Seafile](http://localhost:8480)
 * Paperless

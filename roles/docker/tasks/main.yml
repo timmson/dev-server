@@ -8,7 +8,7 @@
   - name: Add Docker repository
     apt_repository:
       repo: "{{ docker_deb_url }}"
-      filename: nodesource
+      filename: docker
       state: present
     become: yes
 
@@ -17,12 +17,6 @@
       name: ['docker', 'docker-compose']
       update_cache: yes
       force: yes
-      state: present
-    become: yes
-
-  - name: Install Docker Compose
-    pip:
-      name: ['docker', 'docker-compose']
       state: present
     become: yes
 

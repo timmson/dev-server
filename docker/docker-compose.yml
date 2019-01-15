@@ -1,33 +1,45 @@
 version: '2'
 services:
+
+  # https://www.jetbrains.com/help/youtrack/standalone/youtrack-docker-installation.html
   youtrack:
-    image: jetbrains/youtrack
+    image: jetbrains/youtrack:2018.4.48733
     container_name: youtrack
     ports:
-      - 8080:8080
+      - 8180:8080
     restart: always
+
+  # See https://docs.gitlab.com/omnibus/docker/
   gitlab:
-    image: gitlab/gitlab-ce
+    image: gitlab/gitlab-ce:11.6.3-ce.0
     container_name: gitlab
+    hostname: gitlab
     ports:
-      - 8080:8080
+      - 8280:80
+    restart: always
+
+  # See https://docs.mattermost.com/install/docker-local-machine.html
   mattermost:
-    image: mattermost/mattermost-team-edition
+    image: mattermost/mattermost-preview:latest
     container_name: mattermost
     ports:
-      - 8080:8080
+      - 8380:8065
+    restart: always
+
+  # See https://manual.seafile.com/deploy/deploy_with_docker.html
   seafile:
-    image: jenserat/seafile
+    image: seafileltd/seafile:latest
     container_name: seafile
     ports:
-      - 10001:10001
-      - 12001:12001
-      - 8000:8000
-      - 8080:8080
-      - 8082:8082
+      - 8480:80
+    restart: always
+
+
   paperless:
-    image: danielquinn/paperless
+    image: danielquinn/paperless:latest
     container_name: paperless
+    command: ["runserver", "--insecure", "--noreload", "0.0.0.0:8000"]
     ports:
-      - 8000:8000
+      - 8580:8000
+    restart: always
 

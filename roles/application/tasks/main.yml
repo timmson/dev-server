@@ -1,0 +1,6 @@
+---
+  - name: Start docker-compose
+    command: docker-compose up -d --build
+    args:
+      chdir: ./docker
+    become: yes

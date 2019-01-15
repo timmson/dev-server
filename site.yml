@@ -5,3 +5,4 @@
     - set-apt-source
     - common
     - docker
+    - application
